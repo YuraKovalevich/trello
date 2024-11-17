@@ -1,0 +1,51 @@
+.sidebar {
+    width: 250px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    height: 100vh;
+    color: #b6c2cf;
+    border-right: 1px solid #2c2c2c;
+}
+
+.sidebar__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.sidebar__item {
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.sidebar__item:hover {
+    color: #fff;
+}
+
+.workspace {
+    margin-top: 20px;
+}
+
+.workspace__title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #b6c2cf;
+}
+
+.workspace__list {
+    list-style: none;
+    padding: 0;
+}
+
+.workspace__item {
+    font-size: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.workspace__item span {
+    color: #0079bf;
+    font-weight: 500;
+}
