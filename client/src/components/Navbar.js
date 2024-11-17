@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaSearch, FaBell, FaInfoCircle, FaUserCircle } from 'react-icons/fa';
 import styles from '../styles/navbar.module.css';
+import {LOGIN_ROUTE, TRELLO_ROUTE} from "../utils/consts";
 
 const Navbar = () => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -13,7 +14,7 @@ const Navbar = () => {
     return (
         <div className={styles.navbar}>
             <nav className={styles.navbar__container}>
-                <Link to="/" className={styles.navbar__logo}>
+                <Link to={TRELLO_ROUTE} className={styles.navbar__logo}>
                     <span className={styles.logo__text}>Trello</span>
                 </Link>
                 <div className={styles.navbar__menu}>
@@ -41,9 +42,9 @@ const Navbar = () => {
                         <li className={styles.menu__item}>
                             <FaInfoCircle className={styles.icon} title="Information" />
                         </li>
-                        <li className={styles.menu__item}>
+                        <Link className={styles.menu__item} to={LOGIN_ROUTE}>
                             <FaUserCircle className={styles.icon} title="Account" />
-                        </li>
+                        </Link>
                     </ul>
                 </div>
             </nav>
